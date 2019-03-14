@@ -1,0 +1,23 @@
+.profile-feed {
+  border: 1px solid gray;
+  padding: 5px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  background-color: lightyellow;
+  color: black;
+}
+
+.job-feed {
+  border: 1px solid gray;
+  padding: 5px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  background-color: lightblue;
+  color: black;
+}
+
+.news-feed-banner {
+  width: 400px;
+}
