@@ -15,6 +15,7 @@ import { NewsFeedComponent } from './news-feed.component';
 })
 export class NewsFeedBannerComponent implements OnInit, OnDestroy {
   @Input() newsfeeds: NewsFeedItem[];
+  @Input() feedindex: number;
   currentAdIndex = -1;
   @ViewChild(NewsFeedDirective) newsfeed: NewsFeedDirective;
   interval: any;
@@ -31,9 +32,12 @@ export class NewsFeedBannerComponent implements OnInit, OnDestroy {
   }
 
   loadNewsFeedComponents() {
+
     this.currentAdIndex = (this.currentAdIndex + 1) % this.newsfeeds.length;
+
+    console.log('print this news feed', this.feedindex);
     
-    let NewsFeedItem = this.newsfeeds[this.currentAdIndex];
+    let NewsFeedItem = this.newsfeeds[this.feedindex ];
 
     let componentFactory = this.componentFactoryResolver.resolveComponentFactory(NewsFeedItem.component);
 
@@ -45,8 +49,8 @@ export class NewsFeedBannerComponent implements OnInit, OnDestroy {
   }
 
   getNewsFeeds() {
-    this.interval = setInterval(() => {
-      this.loadNewsFeedComponents();
-    }, 3000);
+    // this.interval = setInterval(() => {
+    //   this.loadNewsFeedComponents();
+    // }, 3000);
   }
 }

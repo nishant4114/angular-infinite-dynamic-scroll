@@ -2,6 +2,7 @@ import { BrowserModule }        from '@angular/platform-browser';
 import { NgModule }             from '@angular/core';
 import { AppComponent }         from './app.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { JobFeedComponent }   from './job-feed.component';
 import { NewsFeedBannerComponent }    from './news-feed-banner.component';
 import { ProfileFeedComponent } from './profile-feed.component';
 import { NewsFeedDirective }          from './news-feed.directive';
@@ -12,10 +13,10 @@ import { NewsFeedService }            from './news-feed.service';
   providers: [NewsFeedService],
   declarations: [ AppComponent,
                   NewsFeedBannerComponent,
-                 
+                  JobFeedComponent,
                   ProfileFeedComponent,
                   NewsFeedDirective ],
-  entryComponents: [  ProfileFeedComponent ],
+  entryComponents: [  JobFeedComponent, ProfileFeedComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {
